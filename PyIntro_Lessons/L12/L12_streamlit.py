@@ -42,6 +42,18 @@ def create_basic_app():
         ["Red", "Blue", "Green", "Yellow", "Purple"]
     )
     st.write(f"Your favorite color is {favorite_color}! 🎨")
+
+    demographic_data = pd.DataFrame({
+        "Name": name,
+        "Age": age,
+        "Favorite Color": favorite_color
+    }, index=[0])
+    st.download_button(
+        label="Download your data as CSV",
+        data=demographic_data.to_csv(index=False),
+        file_name='demographic_data.csv',
+        mime='text/csv'
+    )  
     
     # Add a checkbox
     if st.checkbox("Show me a surprise!"):

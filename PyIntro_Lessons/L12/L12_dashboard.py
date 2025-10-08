@@ -157,7 +157,7 @@ def create_dashboard():
             color='region'
         )
         fig_sales.update_layout(height=400)
-        st.plotly_chart(fig_sales, use_container_width=True)
+        st.plotly_chart(fig_sales, width='stretch')
         
         # Sales by region pie chart
         col1, col2 = st.columns(2)
@@ -169,7 +169,7 @@ def create_dashboard():
                 names=region_sales.index,
                 title='Sales by Region'
             )
-            st.plotly_chart(fig_pie, use_container_width=True)
+            st.plotly_chart(fig_pie, width='stretch')
         
         with col2:
             # Sales by product category
@@ -179,7 +179,7 @@ def create_dashboard():
                 y=category_sales.values,
                 title='Sales by Product Category'
             )
-            st.plotly_chart(fig_bar, use_container_width=True)
+            st.plotly_chart(fig_bar, width='stretch')
     
     with tab2:
         st.subheader("Employee Analytics")
@@ -192,7 +192,7 @@ def create_dashboard():
             title='Salary Distribution',
             color='department'
         )
-        st.plotly_chart(fig_hist, use_container_width=True)
+        st.plotly_chart(fig_hist, width='stretch')
         
         # Performance vs Salary scatter plot
         col1, col2 = st.columns(2)
@@ -207,7 +207,7 @@ def create_dashboard():
                 title='Experience vs Salary',
                 hover_data=['name']
             )
-            st.plotly_chart(fig_scatter, use_container_width=True)
+            st.plotly_chart(fig_scatter, width='stretch')
         
         with col2:
             # Department performance
@@ -217,7 +217,7 @@ def create_dashboard():
                 y=dept_performance.values,
                 title='Average Performance by Department'
             )
-            st.plotly_chart(fig_dept, use_container_width=True)
+            st.plotly_chart(fig_dept, width='stretch')
     
     with tab3:
         st.subheader("Stock Price Analysis")
@@ -230,7 +230,7 @@ def create_dashboard():
             title='Stock Price Over Time'
         )
         fig_stock.update_layout(height=400)
-        st.plotly_chart(fig_stock, use_container_width=True)
+        st.plotly_chart(fig_stock, width='stretch')
         
         # Volume and price correlation
         col1, col2 = st.columns(2)
@@ -242,7 +242,7 @@ def create_dashboard():
                 y='volume',
                 title='Trading Volume (Last 30 Days)'
             )
-            st.plotly_chart(fig_volume, use_container_width=True)
+            st.plotly_chart(fig_volume, width='stretch')
         
         with col2:
             # Price distribution
@@ -252,7 +252,7 @@ def create_dashboard():
                 nbins=20,
                 title='Price Distribution'
             )
-            st.plotly_chart(fig_dist, use_container_width=True)
+            st.plotly_chart(fig_dist, width='stretch')
     
     with tab4:
         st.subheader("Interactive Visualizations")
@@ -269,7 +269,7 @@ def create_dashboard():
             hover_data=['name'],
             title='Interactive Employee Analysis'
         )
-        st.plotly_chart(fig_interactive, use_container_width=True)
+        st.plotly_chart(fig_interactive, width='stretch')
         
         # 3D scatter plot
         st.write("**3D Visualization**")
@@ -281,7 +281,7 @@ def create_dashboard():
             color='department',
             title='3D Employee Analysis'
         )
-        st.plotly_chart(fig_3d, use_container_width=True)
+        st.plotly_chart(fig_3d, width='stretch')
     
     st.divider()
     
@@ -295,7 +295,7 @@ def create_dashboard():
         st.subheader("Sales Data")
         st.dataframe(
             filtered_sales.head(20),
-            use_container_width=True,
+            width='stretch',
             hide_index=True
         )
         
@@ -312,7 +312,7 @@ def create_dashboard():
         st.subheader("Employee Data")
         st.dataframe(
             filtered_employees.head(20),
-            use_container_width=True,
+            width='stretch',
             hide_index=True
         )
         
@@ -329,7 +329,7 @@ def create_dashboard():
         st.subheader("Stock Data")
         st.dataframe(
             stock_data.head(20),
-            use_container_width=True,
+            width='stretch',
             hide_index=True
         )
         

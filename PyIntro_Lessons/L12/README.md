@@ -1,77 +1,70 @@
-# Streamlit Lesson 12
+# US Census Data Dashboard
 
-This folder contains a Streamlit web application example with Python 3.12.8.
+A comprehensive Streamlit dashboard for analyzing US Census data from 2010-2019.
 
-## Setup
+## Features
 
-1. **Create virtual environment** (if not already done):
-   ```bash
-   python3.12 -m venv venv
-   ```
+- **Interactive Data Visualization**: Multiple chart types including line charts, bar charts, scatter plots, and histograms
+- **Dynamic Filtering**: Filter data by year range, states, and regions
+- **Population Trends**: Track population changes over time
+- **Regional Analysis**: Compare population patterns across different US regions
+- **Growth Analysis**: Analyze population growth rates and patterns
+- **Responsive Design**: Clean, modern interface with sidebar controls
 
-2. **Activate virtual environment**:
-   ```bash
-   source venv/bin/activate
-   ```
+## Getting Started
 
-3. **Install dependencies**:
-   ```bash
-   pip install -r requirements.txt
-   ```
+### Prerequisites
 
-## Running the Apps
+- Python 3.7+
+- Required packages (see requirements.txt)
 
-### Basic Streamlit App
-1. **Activate the virtual environment**:
-   ```bash
-   source venv/bin/activate
-   ```
+### Installation
 
-2. **Run the basic Streamlit app**:
-   ```bash
-   streamlit run L12_streamlit.py
-   ```
+1. Install the required packages:
+```bash
+pip install -r requirements.txt
+```
 
-### Advanced Dashboard
-3. **Run the advanced dashboard**:
-   ```bash
-   streamlit run dashboard.py
-   ```
+2. Ensure the census data file (`nst-est2019-alldata.csv`) is in the same directory as the dashboard script.
 
-4. **Open your browser** to `http://localhost:8501`
+### Running the Dashboard
 
-## What's Included
+```bash
+streamlit run L12_census_dashboard.py
+```
 
-### Basic App (`L12_streamlit.py`)
-- ✅ Latest Streamlit (v1.50.0) with Python 3.12.8
-- ✅ Interactive widgets (sliders, inputs, buttons)
-- ✅ Data visualization and tables
-- ✅ Download functionality
-- ✅ Responsive layout with columns
-- ✅ Fun animations (balloons!)
+The dashboard will open in your default web browser at `http://localhost:8501`.
 
-### Advanced Dashboard (`dashboard.py`)
-- 📊 **Interactive Charts**: Line, bar, pie, scatter, 3D plots
-- 📈 **Real-time Metrics**: KPIs with delta indicators
-- 🎛️ **Advanced Filters**: Date ranges, multi-select, dynamic filtering
-- 📋 **Data Tables**: Sortable, downloadable CSV files
-- 🎯 **Interactive Features**: Zoom, pan, hover tooltips
-- 📱 **Responsive Design**: Wide layout, tabs, columns
+## Dashboard Sections
 
-## Features Demonstrated
+### 📊 Population Trends
+- Line charts showing population changes over time
+- Bar charts displaying population growth by state
 
-### Basic Features
-- **Interactive Controls**: Sliders, text inputs, selectboxes, checkboxes
-- **Data Handling**: Pandas DataFrames, NumPy arrays
-- **Visualization**: Tables, metrics, statistics
-- **User Experience**: Sidebar, columns, animations
-- **File Operations**: CSV download functionality
+### 🗺️ Geographic Analysis
+- Population distribution by state
+- Interactive state comparison tables
 
-### Advanced Features
-- **Plotly Integration**: Interactive charts with zoom/pan
-- **Multi-tab Layout**: Organized content sections
-- **Dynamic Filtering**: Real-time data filtering
-- **3D Visualizations**: Advanced data exploration
-- **Professional Dashboard**: Business-ready analytics
+### 📈 Growth Analysis
+- Growth rate distributions
+- Scatter plots showing population size vs growth rate
 
-Perfect for learning Streamlit from basics to advanced! 🎉
+### 🌎 Regional Analysis
+- Regional population trends
+- Regional summary statistics
+
+## Data Source
+
+US Census Bureau - Annual Estimates of the Resident Population for the United States, Regions, States, and Puerto Rico: April 1, 2010 to July 1, 2019
+
+## Educational Notes
+
+This dashboard demonstrates various Streamlit features:
+- Data loading and caching with `@st.cache_data`
+- Interactive widgets (sliders, selectboxes, multiselect)
+- Layout organization (columns, sidebar, tabs)
+- Multiple visualization types with Plotly
+- Data filtering and aggregation
+- Responsive design with custom CSS
+
+Perfect for learning Streamlit fundamentals and data visualization techniques!
