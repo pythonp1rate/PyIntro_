@@ -19,6 +19,7 @@ import matplotlib.pyplot as plt
 # TODO: Set a nice style for your plots
 # Hint: Use sns.set_style() and plt.rcParams
 
+
 # Load the dataset
 # TODO: Load the penguins dataset using seaborn
 
